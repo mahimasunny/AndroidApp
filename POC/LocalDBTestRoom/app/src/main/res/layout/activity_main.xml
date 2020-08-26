@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <!-- TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/ -->
+    <!--<Button-->
+            <!--android:text="AddItems"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btnAdd" android:layout_marginBottom="60dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"-->
+            <!--android:layout_marginLeft="156dp" android:layout_marginStart="156dp"/>-->
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvItems"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            android:layout_weight="50"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:padding="5dp"
+    >
+        <Button
+                android:text="AddItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdd"
+
+        />
+        <Button
+                android:text="ClearItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnClear"
+
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout android:layout_width="320dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_margin="20dp"
+                  android:padding="20dp"
+                  android:orientation="vertical"
+                  android:background="@android:drawable/alert_light_frame">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+
+        >
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Record Duration (seconds):"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvDuration"
+                />
+
+                <EditText
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editDuration"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Emergency Phone (for texting):"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+
+            </LinearLayout>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editPhone" android:layout_weight="1"/>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Trigger Value (BPM):"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvTrigger"
+                />
+
+                <EditText
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTrigger"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:paddingBottom="10dp">
+                    <TextView
+                            android:text="Safe Words or Phrases:"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/tvSafeWords"
+                            android:layout_weight="1"/>
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:gravity="start|top"
+                            android:ems="10"
+                            android:hint="Enter phrases (without punctuation) to detect as Safe Words. Use comma to separate phrases"
+                            android:id="@+id/editSafeWords" android:layout_weight="1" android:textSize="14sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Vibrate for Safe Word"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvVibrate"
+                        android:layout_margin="5dp"
+                />
+                <Switch
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content" android:id="@+id/swSafeWordVibrate"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text=" .   .   . " android:textSize="18sp"
+                android:textStyle="bold">
+        </TextView>
+        <LinearLayout
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Enable Recording"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvEnable"
+                        android:layout_margin="5dp"
+                        tools:text="Enable Recording"/>
+                <Switch
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content" android:id="@+id/swEnable"
+                />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Enable Testing Features"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvEnableTest"
+                        android:layout_margin="5dp"
+                        tools:text="Enable Testing Features"/>
+                <Switch
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content" android:id="@+id/swEnableTest"
+                />
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView
+                        android:text="Device Name:"
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvBuzz"
+                        android:layout_column="1"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:ems="10"
+                        android:id="@+id/tvDeviceName"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:gravity="bottom|right"
+        >
+            <Button
+                    android:text="Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnSettingsCancel"/>
+
+            <Button
+                    android:text="Finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnSettingsFinish"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
